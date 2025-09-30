@@ -7,10 +7,10 @@
   --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 
   /* Body font size. By default, effectively 18.4px, based on 16px as 'root em' */
-  --base-fontsize: 1.15rem;
+  --base-fontsize: 1rem;
 
-  /* Major third scale progression - see https://type-scale.com/ */
-  --header-scale: 1.25;
+  /* Minor Second scale progression - see https://type-scale.com/ */
+  --header-scale: 1.125;
 
   /* Line height is set to the "Golden ratio" for optimal legibility */
   --line-height: 1.618;
@@ -67,7 +67,7 @@ body {
   flex: 1;
   margin: 0 auto;
   max-width: 45rem;
-  padding: 0 0.5rem;
+  padding: 1rem 1.5rem;
   overflow-x: hidden;
   word-break: break-word;
   overflow-wrap: break-word;
@@ -148,7 +148,8 @@ h1 {
     var(--base-fontsize) * var(--header-scale) * var(--header-scale) *
       var(--header-scale) * var(--header-scale)
   );
-  margin-top: calc(var(--line-height) * 1.5rem);
+  margin-top: calc(var(--line-height) * 1.1rem);
+  color: rgb(221, 221, 145);
 }
 
 h2 {
@@ -156,29 +157,32 @@ h2 {
     var(--base-fontsize) * var(--header-scale) * var(--header-scale) *
       var(--header-scale)
   );
-  margin-top: calc(var(--line-height) * 1.5rem);
+  margin-top: calc(var(--line-height) * 1.1rem);
+  color: rgb(172, 182, 236);
 }
 
 h3 {
   font-size: calc(
     var(--base-fontsize) * var(--header-scale) * var(--header-scale)
   );
-  margin-top: calc(var(--line-height) * 1.5rem);
+  margin-top: calc(var(--line-height) * 1.1rem);
+  color: rgb(163, 231, 163)
 }
 
 h4 {
   font-size: calc(var(--base-fontsize) * var(--header-scale));
-  margin-top: calc(var(--line-height) * 1.5rem);
+  margin-top: calc(var(--line-height) * 1.1rem);
+  color: rgb(248, 161, 175)
 }
 
 h5 {
   font-size: var(--base-fontsize);
-  margin-top: calc(var(--line-height) * 1.5rem);
+  margin-top: calc(var(--line-height) * 1.1rem);
 }
 
 h6 {
   font-size: calc(var(--base-fontsize) / var(--header-scale));
-  margin-top: calc(var(--line-height) * 1.5rem);
+  margin-top: calc(var(--line-height) * 1.1rem);
 }
 
 /* Format links & buttons */
