@@ -1,49 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Ej 23 Sept</title>
-		<link rel="stylesheet" href="style.css" />
-		<script defer src="script.js"></script>
-	</head>
 
-	<body>
-		<h1>1. Bucles</h1>
-		<p>
-			En javascript puedes calcular una potencia x<sup>n</sup> de la forma x**n, o a
-			través del objeto Math: <code>Math.pow(x, n)</code>
-		</p>
-		<h2>
-			a) Haz los siguientes ejercicios utilizando en cada uno de ellos un
-			bucle diferente (for , while y do-while).
-		</h2>
-		<h3>
-			1) Utiliza un bucle para calcular 2<sup>53</sup> (máxima precisión entera para
-			JS).
-		</h3>
-		<span id="r1">resultado</span>
-		<h3>2) Muestra también 2<sup>53</sup> + 1.</h3>
-    <span id="r2">resultado</span>
-		<h3>3) Con un bucle calcula 2<sup>128</sup> (número de IPv6 disponibles)</h3>
-		<span id="r3">resultado</span>
-    <h3>4) Calcula el factorial de 128.</h3>
-    <span id="r4">resultado</span>
-		<h2>
-			b) Haz los mismos cálculos utilizando números BigInt y utilizando un
-			bucle diferente en cada caso.
-		</h2>
-		<h3>5) con BigInt - Calcula 2<sup>53</sup> (máxima precisión entera para JS)</h3>
-    <span id="r5">resultado</span>
-		<h3>
-			6) con BigInt - Muestra también 2<sup>53</sup> + 1. (número de IPv6
-			disponibles)
-		</h3>
-    <span id="r6">resultado</span>
-		<h3>7) con BigInt - Con un bucle calcula 2<sup>128</sup> (número de IPv6 
-			disponibles)</h3>
-    <span id="r7">resultado</span>
-		<h3>8) con BigInt - Calcula el factorial de 128.</h3>
-		<span id="r8">resultado</span>
-	</body>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Ej 23 Sept</title>
+	<link rel="stylesheet" href="style.css" />
+	<script defer src="script.js"></script>
+</head>
+
+<body>
+
+	<!-- 1. BUCLES -->
+	<h1>1. Bucles</h1>
+	<p>
+		En javascript puedes calcular una potencia x<sup>n</sup> de la forma x**n, o a
+		través del objeto Math: <code>Math.pow(x, n)</code>
+	</p>
+	<h2>
+		a) Haz los siguientes ejercicios utilizando en cada uno de ellos un
+		bucle diferente (for , while y do-while).
+	</h2>
+
+	<h3>
+		1) Utiliza un bucle para calcular 2<sup>53</sup> (máxima precisión entera para
+		JS).
+	</h3>
+	<span id="r1">resultado</span>
+	<h3>2) Muestra también 2<sup>53</sup> + 1.</h3>
+	<span id="r2">resultado</span>
+	<h3>3) Con un bucle calcula 2<sup>128</sup> (número de IPv6 disponibles)</h3>
+	<span id="r3">resultado</span>
+	<h3>4) Calcula el factorial de 128.</h3>
+	<span id="r4">resultado</span>
+
+	<h2>
+		b) Haz los mismos cálculos utilizando números BigInt y utilizando un
+		bucle diferente en cada caso.
+	</h2>
+	<h3>5) con BigInt - Calcula 2<sup>53</sup> (máxima precisión entera para JS)</h3>
+	<span id="r5">resultado</span>
+	<h3>
+		6) con BigInt - Muestra también 2<sup>53</sup> + 1. (número de IPv6
+		disponibles)
+	</h3>
+	<span id="r6">resultado</span>
+	<h3>7) con BigInt - Con un bucle calcula 2<sup>128</sup> (número de IPv6
+		disponibles)</h3>
+	<span id="r7">resultado</span>
+	<h3>8) con BigInt - Calcula el factorial de 128.</h3>
+	<span id="r8">resultado</span>
+
+	<!-- 2. OBJETO MATH -->
+	<h1>2. Objeto Math</h1>
+	<p>
+		En JavaScript, el objeto <code>Math</code> es una librería cuyos métodos son las clásicas funciones matemáticas,
+		por ejemplo:
+	</p>
+
+	<h2>Ejemplo básico</h2>
+	<p><code>document.write("&lt;h1&gt;", Math.random(), "&lt;/h1&gt;")</code></p>
+	<p>
+		mostraría un número aleatorio comprendido entre 0 y 1 (en Java, equivaldría a la clase
+		<span class="g">java.lang.Math</span>).
+	</p>
+	<p><i>Nota:</i> Realmente, el número 1 no saldrá nunca, ya que los números aleatorios se generan en el intervalo [0,
+		1).</p>
+	<p>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">
+			<code>Math</code> en MDN</a>
+	</p>
+
+	<h2>Ejercicios</h2>
+
+	<h3>a) Muestra en la página web un número aleatorio en el rango de 0 a 6.</h3>
+	<span id="r9">resultado</span>
+
+	<h3>
+		b) Lo mismo de antes, pero eliminando la parte decimal del número aleatorio.
+		Es decir, debes generar un número cualquiera del conjunto: { 0, 1, 2, 3, 4, 5 }.
+		<br />
+		Y también números aleatorios del 7 al 13 (ambos incluidos).
+	</h3>
+	<span id="r10">resultado</span>
+	<span id="r11">resultados: </span>
+
+
+</body>
+
 </html>

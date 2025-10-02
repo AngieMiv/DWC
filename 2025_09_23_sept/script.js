@@ -98,3 +98,22 @@ for (let i=1n; i<=b; i++) {
 }
 document.getElementById("r8").innerHTML 
 = "El resultado es: " + r8;
+
+// 9) Muestra en la página web un número aleatorio en el rango de 0 a 6
+let r9 = Math.random() * 7;
+document.getElementById("r9").innerHTML 
+= "El resultado es: " + r9; 
+
+// 10) Lo mismo de antes, pero eliminando la parte decimal del número aleatorio.
+// Es decir, debes generar un número cualquiera del conjunto: { 0, 1, 2, 3, 4, 5 }
+let r10 = Math.floor(Math.random() * 6);
+document.getElementById("r10").innerHTML 
+= "El resultado es: " + r10;
+
+let min = 7;
+let max = 13;
+for (let x = 1; x <= 100; x++) {
+    let r11 = min + Math.floor((max - min) * Math.random());
+    document.getElementById("r11").innerHTML 
+    += + r11 + ", ";
+}

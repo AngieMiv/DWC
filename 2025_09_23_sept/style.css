@@ -16,7 +16,7 @@
   --line-height: 1.618;
 
   /* Default (light) theme */
-  --bg: #fff;
+/*   --bg: #fff;
   --accent-bg: #f5f7ff;
   --text: #212121;
   --text-light: #585858;
@@ -30,8 +30,8 @@
 }
 
 /* Dark theme */
-@media (prefers-color-scheme: dark) {
-  :root {
+/** @media (prefers-color-scheme: dark) {
+  :root { */
     --bg: #212121;
     --accent-bg: #2b2b2b;
     --text: #dcdcdc;
@@ -42,7 +42,7 @@
     --code: #f06292;
     --preformatted: #ccc;
     --disabled: #111;
-  }
+/*   } */
 
   img,
   video {
@@ -482,7 +482,7 @@ pre,
 pre span,
 kbd,
 samp {
-  font-size: 1rem;
+ /*  font-size: 1rem; */
   font-family: var(--mono-font);
   color: var(--code);
 }
