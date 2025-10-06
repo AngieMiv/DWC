@@ -85,6 +85,130 @@
 	<span id="r10">resultado</span>
 	<span id="r11">resultados: </span>
 
+	<h1>3. Funciones del objeto Math</h1>
+
+	<p>
+		El objeto <code>Math</code> tiene multitud de funciones estáticas para realizar cálculos matemáticos.
+		Algunos de ellos son:
+	</p>
+
+	<h2>Principales métodos y propiedades</h2>
+
+	<p><code>Math.random()</code> – número aleatorio entre 0 y 1</p>
+	<p><code>Math.ceil(x)</code> – redondea al entero superior</p>
+	<p><code>Math.floor(x)</code> – redondea al entero inferior</p>
+	<p><code>Math.round(x)</code> – redondea al entero más próximo</p>
+	<p><code>Math.trunc(x)</code> – trunca (elimina la parte decimal)</p>
+	<p><code>Math.max(x, y, z, ...)</code> – devuelve el máximo de los argumentos</p>
+	<p><code>Math.min(x, y, z, ...)</code> – devuelve el mínimo de los argumentos</p>
+	<p><code>Math.PI</code> – 3.141592653589793</p>
+
+	<!-- 2. OBJETO DATE -->
+	<h1>Objeto <code>Date</code></h1>
+	<p>
+		En JavaScript, el objeto <code>Date</code> se utiliza para instanciar objetos que almacenan una fecha y hora.
+		Por ejemplo:
+	</p>
+
+	<h2>Ejemplo básico</h2>
+	<p><code>document.write("&lt;h1&gt;", new Date(), "&lt;/h1&gt;")</code></p>
+	<p>
+		mostraría la fecha y hora actual (en Java, equivaldría a la clase
+		<span class="g">java.util.Date</span>).
+	</p>
+
+	<p>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">
+			<code>Date</code> en MDN</a>
+	</p>
+
+	<h2>Algunas formas de crear fechas</h2>
+
+	<p><code>let d1 = new Date()</code></p>
+	<p><code>let d2 = new Date(2025, 11, 23)</code></p>
+	<p><code>let d3 = new Date("2025/12/23")</code></p>
+	<p><code>let d4 = new Date(2025, 11, 23, 23, 59, 59)</code></p>
+	<p><code>let d5 = new Date("2025/12/31 23:59:59")</code></p>
+
+	<h2>Ejercicios</h2>
+
+	<h3>a) Visualiza las fechas de <span class="b">31 de febrero</span> y <span class="b">32 de marzo</span> de este año.
+	</h3>
+	<span id="r12">resultado</span>
+	<span id="r13">resultado</span>
+
+	<h3>
+		b) Las fechas se almacenan en la memoria como un número: el número de milisegundos transcurridos
+		desde... ¿qué fecha? (<i>Unix epoch</i>)
+	</h3>
+	<span id="r14">resultado</span>
+
+	<h3>c) Si restas dos fechas, por ejemplo <code>d1 - d2</code>, ¿qué obtienes?</h3>
+	<span id="r15">resultado</span>
+	<span id="r15days">en días</span>
+
+	<h3>d) ¿Cuántos días quedan para que acabe el año?</h3>
+	<span id="r16">resultado</span>
+
+	<h3>e) ¿Cuántos años tienes? ¿y meses? ¿y días?</h3>
+	<span id="r17_years">años</span>
+	<span id="r17_months">meses</span>
+	<span id="r17_days">días</span>
+
+	<!-- 3. OBJETO STRING-->
+	<h1>Objeto <code>String</code></h1>
+	<p>
+		En JavaScript, podemos encerrar una cadena de caracteres entre comillas simples (<code>'</code>), comillas dobles
+		(<code>"</code>) y acentos graves (<code>`</code>).
+	</p>
+	<p>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">
+			<code>String</code> en MDN
+		</a>
+	</p>
+
+	<h2>Ejercicios</h2>
+
+
+	<h3>a) ¿Qué ventaja tienen los <code>template strings</code> respecto a las otras formas de crear cadenas?</h3>
+	<p>Permiten insertar expresiones y variables directamente dentro de la cadena con <code>${...}</code>, además de
+		mantener saltos de línea sin necesidad de concatenar.</p>
+
+	<h3>b) ¿Qué método utilizas para obtener el 5º carácter de una cadena? (piensa en Java)</h3>
+	<p>Se puede usar <code>charAt(4)</code> o acceder como un array con <code>str[4]</code>.</p>
+
+	<h3>c) ¿Para qué se utiliza el método <code>indexOf(n)</code>? (piensa en Java)</h3>
+	<p>Para obtener la posición de la primera aparición de un carácter o subcadena dentro del string; devuelve -1 si no se
+		encuentra.</p>
+
+	<h3>d) ¿Qué variable miembro almacena la longitud de la cadena? (piensa en Java)</h3>
+	<p>La propiedad <code>length</code> del string.</p>
+
+	<h3>e) ¿Qué operador se utiliza para encadenar varios strings? (piensa en Java)</h3>
+	<p>El operador <code>+</code>.</p>
+
+	<h3>f) Comparación de strings con operadores:</h3>
+	<p>Se pueden comparar con <code>==</code>, <code>===</code>, <code>&lt;</code>, <code>&gt;</code>, etc. "gato" es
+		mayor que "Gato" porque las mayúsculas tienen menor valor Unicode que las minúsculas.</p>
+
+	<h3>g) Extraer la última palabra de una cadena con <code>slice</code></h3>
+	<p>Se puede hacer con <code>ciudad.slice(ciudad.lastIndexOf(" ") + 1)</code>, que devolvería <code>"Escorial"</code>.
+	</p>
+
+	<h3>h) Algunos métodos útiles de <code>String</code>:</h3>
+	<p>
+		<code>indexOf()</code>, <code>lastIndexOf()</code>, <code>startsWith()</code>, <code>endsWith()</code>,
+		<code>includes()</code>, <code>repeat()</code>,
+		<code>padEnd()</code>, <code>padStart()</code>, <code>trim()</code>, <code>trimStart()</code>,
+		<code>trimEnd()</code>, <code>toUpperCase()</code>,
+		<code>toLowerCase()</code>, <code>slice()</code>, <code>replace()</code>, <code>replaceAll()</code>
+	</p>
+
+	<h3>i) Introduce una frase y muestra primera y última palabra</h3>
+
+	<input type="text" id="phraseInput" placeholder="Escribe tu frase aquí">
+	<button onclick="mostrarPalabras()">Mostrar</button>
+	<p id="r18"></p>
 
 </body>
 
