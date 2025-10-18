@@ -1,14 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script defer src="script.js"></script>
-		<title>29 sept</title>
-	</head>
-	<body>
-		<input type="text" value="33" id="entrada" />
-		<input type="button" value="pulsa" id="boton" />
-		<h1 id="salida"></h1>
-	</body>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="styles.css" />
+	<script defer src="script.js"></script>
+	<title>29 sept</title>
+</head>
+
+<body>
+	<h1>Ejercicios 29 Septiembre</h1>
+	<h2>1.Lectura de atributo y evento</h2>
+
+	<!-- 1. Lectura de atributo y evento -->
+	<h3>1.Saludar</h3>
+	<label for="name">Nombre: </label>
+	<input type="text" id="name">
+	<button onclick="Saludar()">
+		¡Salúdame!
+	</button>
+	<h1 id="resultado1"></h1>
+
+	<!-- 2. Casting -->
+	<h3>2.Casting</h3>
+	<input type="number" id="number_A">
+	<button onclick="Sumar()">+</button>
+	<input type="number" id="number_B">
+	<h1 id="resultado2"></h1>
+
+	<!-- 3. Dado y dado alfabético -->
+	<h3>3.Dado numérico y alfabético</h3>
+	<button onclick="DadoNum()">dado 1 - 6</button>
+	<p id="resultado3a"></p>
+	<br>
+	<button onclick="DadoAlf()">dado A - Z</button>
+	<p id="resultado3b"></p>
+
+	<!-- 4. Intercambio de datos -->
+	<h3>4.Intercambio de datos</h3>
+	<input type="text" id="texto4a" size="10">
+	<div id="buttons4" class="centered">
+		<button onclick="Intercambio41()">&rarr;</button>
+		<button onclick="Intercambio42()">&larr;</button>
+	</div>
+	<input type="text" id="texto4b" size="10">
+
+	<!-- 5. Dados -->
+	<h3>5. Lanzamiento de tres dados</h3>
+	<p>
+		Crea un formulario con tres botones que lancen dados de 6 caras.
+	</p>
+	<p>
+		Cada vez que se pulse uno de los botones se mostrará abajo su resultado, junto con
+		los resultados obtenidos de los otros dos dados (inicialmente valdrán 0).
+		Al pulsar cualquiera de ellos se mostrará la suma de todas las caras.
+	</p>
+
+	<button onclick="LanzarDado(1)">Lanzar dado 1</button>
+	<button onclick="LanzarDado(2)">Lanzar dado 2</button>
+	<button onclick="LanzarDado(3)">Lanzar dado 3</button>
+	<h2 id="resultado5">Dado 1: 0 | Dado 2: 0 | Dado 3: 0 | Suma: 0</h2>
+
+	<!-- 6. Color aleatorio -->
+	<h3>6.Color aleatorio</h3>
+	<p>
+		Crea un formulario con tres botones que lancen dados de 256 caras (del 0 al 255).
+		Como en el ejercicio anterior, cada vez que se pulse uno de los botones se mostrará abajo su resultado
+		(inicialmente valdrán 0). <br>
+		También, al pulsar cualquiera de ellos se mostrará en un <code>&lt;div&gt;</code> el color resultante de combinar
+		esos tres valores estilo CSS: <code>background-color: rgb(dado1, dado2, dado3)</code> ).
+	</p>
+	<button onclick="LanzarColor(1)">Lanzar color 1</button>
+	<button onclick="LanzarColor(2)">Lanzar color 2</button>
+	<button onclick="LanzarColor(3)">Lanzar color 3</button>
+	<h2 id="resultado6">Color 1: 0 | Color 2: 0 | Color 3: 0</h2>
+	<div id="muestraColor" class="centered" style="width:100px; height:100px; border:1px solid white;">
+	</div>
+
+</body>
+
 </html>

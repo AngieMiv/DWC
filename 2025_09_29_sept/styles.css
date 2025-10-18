@@ -61,8 +61,8 @@ body {
   background: var(--bg);
   font-size: var(--base-fontsize);
   line-height: var(--line-height);
-  display: flex;
   min-height: 100vh;
+  display: flex;
   flex-direction: column;
   flex: 1;
   margin: 0 auto;
@@ -72,6 +72,19 @@ body {
   word-break: break-word;
   overflow-wrap: break-word;
 }
+
+/* Para centrar solo divs específicos */
+.centered {
+  display: flex;
+  align-items: center;      /* centra verticalmente el contenido del div */
+  justify-content: center;  /* centra horizontalmente el contenido del div */
+  text-align: center;       /* centra texto si hay */
+  gap: 1rem;               /* espacio entre elementos hijos */
+  /* Para que el div se centre dentro de su contenedor */
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 /* Make the header bg full width, but the content inline with body */
 header {
@@ -335,7 +348,7 @@ input {
   border-radius: 5px;
   box-shadow: none;
   box-sizing: border-box;
-  width: 60%;
+/*   width: 60%; */
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
