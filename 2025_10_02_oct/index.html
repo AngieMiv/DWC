@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<script defer src="script.js"></script>
+	<title>2 oct</title>
+</head>
+
+<body>
+	<h1>Ejercicios 2 de Octubre</h1>
+
+	<h2>1. Control de acceso</h2>
+	<p>
+		Crea una página web donde se solicite un password.
+		Tendrá un <code>input-text</code> y un botón.<br>
+		Dicho password se almacenará en una variable, y será el siguiente:
+		<code>password: secreto</code>.<br>
+		Se admitirán hasta tres intentos de acierto.<br>
+		– Si errara se dará por finalizado el proceso de login mostrando un mensaje
+		en la página:
+		<br><code>document.querySelector("#boton").disabled = true;</code><br>
+		– Si acertara el password, se mostrará un mensaje de bienvenida.
+	</p>
+	<p>Contraseña: </p>
+	<input type="text" id="inputPassword">
+	<button id="botonLogin" onclick="solicitarContrasena()">Login</button>
+	<h3 id="mensajeLogin"></h3>
+
+	<h2>2. Ocultar foto</h2>
+	<p>
+		Crea una página con un botón y una fotografía. Al clickar en la foto se ocultará, y con el botón se volverá a
+		visibilizar.
+		<br><i>Para ocultar un elemento de la página web:</i>
+		<br>– estilos CSS: <code>visibility: { hidden | visible }</code>,
+		<code>display: { none | inline | block | inline-block ...}</code>
+		<br>– atributo HTML: <code>hidden="{ true | false }"</code>
+	</p>
+	<img id="photo" src="https://placecats.com/bella/400/400" style="cursor: pointer;" alt="gato"
+		onclick="ocultarImagen()">
+	<br><br>
+	<button id="showBtn">Mostrar imagen</button>
+	<br>
+
+	<h2>3. Tabla de multiplicar</h2>
+	<p>
+		Muestra la tabla de multiplicar <b>del 1 al 10</b> (necesitarás dos bucles <code>for</code> anidados).<br>
+		En la primera fila y en la primera columna se mostrarán los multiplicandos. Por ejemplo:
+	</p>
+
+	<table>
+		<tr>
+			<td><code>X</code></td>
+			<td><b>1</b></td>
+			<td><b>2</b></td>
+			<td><b>3</b></td>
+		</tr>
+		<tr>
+			<td><b>1</b></td>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td><b>2</b></td>
+			<td>2</td>
+			<td>4</td>
+			<td>6</td>
+		</tr>
+		<tr>
+			<td><b>3</b></td>
+			<td>3</td>
+			<td>6</td>
+			<td>9</td>
+		</tr>
+	</table>
+
+	<p>
+		Es posible que el navegador intente renderizar correctamente la tabla si la vas escribiendo poco a poco sobre el
+		documento, obteniéndose un resultado no deseado.
+		<br>Guarda <b>todo el HTML</b> que conforma la tabla en una variable <code>String</code> y luego plásmalo sobre la
+		página web en el innerHTML de algún elemento.
+	</p>
+
+	<table id="tablaMultiplicar">
+	</table>
+
+	<h2>4. Operador ternario</h2>
+	<p>
+		Sin usar la estructura <code>if</code>, encadenando <b>operadores ternarios</b>, muestra la calificación en función
+		de una nota:
+	</p>
+	<div style="margin-left: 5rem;">
+		<code>
+			Nota menor de 5: Suspenso<br>
+			Nota de 5 a algo menor de 7: Aprobado<br>
+			Nota de 7 a algo menor de 9: Notable<br>
+			Nota entre 9 y 10: Sobresaliente
+		</code>
+	</div>
+	<p>
+		Debe validarse que el usuario proporciona una <b>entrada numérica</b> y además está comprendida <b>entre 0 y 10</b>.
+		<br>En caso de que la entrada sea incorrecta, se informará al usuario del error cometido.
+	</p>
+	<input type="number" id="notaInput" step="0.01" min="0" max="10">
+	<button onclick="calificar()">Calificar</button>
+	<h3 id="calificacionResultado"></h3>
+	<br>
+
+	<h2>5. Imágenes en posición aleatoria</h2>
+	<p>
+		Sitúa 3 imágenes en la página web que cambien a una posición aleatoria cada vez que se pulsa un botón.<br>
+		Necesitas las propiedades CSS:
+	</p>
+	<div style="margin-left: 5rem;">
+		<code>
+			position: <i>absolute</i><br>
+			top: &lt;<i>distancia al margen superior</i>&gt;<br>
+			left: &lt;<i>distancia al margen izquierdo</i>&gt;
+		</code>
+	</div>
+	<p>
+		El ancho y alto de la parte visible de la ventana del documento se pueden obtener con:
+	</p>
+	<div style="margin-left: 5rem;">
+		<code>
+			window.innerWidth
+			<br>
+			window.innerHeight
+		</code>
+	</div>
+	<p>
+		Para que las imágenes no oculten el botón cuando se sitúen encima, puedes darle también al botón la propiedad:<br>
+		<code>position: absolute;</code>
+	</p>
+	<div>
+		<img id="img1" src="https://placecats.com/g/100/100" alt="gato1">
+		<img id="img2" src="https://placecats.com/neo_banana/100/100" alt="gato2">
+		<img id="img3" src="https://placecats.com/millie/100/100" alt="gato3">
+	</div>
+
+	<button onclick="moverImagenes()">Mover imágenes</button>
+
+	<br><br>
+
+</body>
+
+</html>
